@@ -9,21 +9,21 @@ import UIKit
 import SnapKit
 
 class MenuViewHeader: UIView {
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
+    //MARK: - init
     
-    init(height: CGFloat) {
-        let frame = CGRect(x: .zero, y: .zero, width: .zero, height: height)
-        super.init(frame: frame)
+    init(){
+        super.init(frame: .zero)
         setupView()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    // MARK: - Private properties
+
     private let imageLogoView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "VanLoveLogo")
@@ -39,12 +39,12 @@ class MenuViewHeader: UIView {
     }()
     
 
+    // MARK: - Private methods
 
     private func setupView() {
         addSubview(optionsButton)
         addSubview(imageLogoView)
         setupConstraints()
-        backgroundColor = .secondarySystemBackground
     }
     
     private func setupConstraints() {
@@ -56,7 +56,8 @@ class MenuViewHeader: UIView {
             make.top.equalToSuperview()
         }
         optionsButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+//            make.centerY.equalToSuperview()
+            make.top.equalToSuperview().offset(23)
             make.width.equalTo(16.5)
             make.height.equalTo(12.9)
             make.leading.equalToSuperview().offset(15)
