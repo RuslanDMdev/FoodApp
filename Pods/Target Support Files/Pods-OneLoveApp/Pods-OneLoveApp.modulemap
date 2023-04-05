@@ -1,0 +1,6 @@
+framework module Pods_OneLoveApp {
+  umbrella header "Pods-OneLoveApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

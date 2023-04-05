@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529B29DD7314003CF6E8 /* AppDelegate.swift */; };
+		0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529D29DD7314003CF6E8 /* SceneDelegate.swift */; };
+		0CFA52A029DD7314003CF6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529F29DD7314003CF6E8 /* ViewController.swift */; };
+		0CFA52A529DD7317003CF6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CFA52A429DD7317003CF6E8 /* Assets.xcassets */; };
+		0CFA52A829DD7317003CF6E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CFA52A629DD7317003CF6E8 /* LaunchScreen.storyboard */; };
+		B8F582EE1FB451DC59F60857 /* Pods_OneLoveApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA1494A525E8301CA28A4D4 /* Pods_OneLoveApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0CFA529829DD7314003CF6E8 /* OneLoveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLoveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CFA529B29DD7314003CF6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0CFA529D29DD7314003CF6E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0CFA529F29DD7314003CF6E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CFA52A429DD7317003CF6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CFA52A729DD7317003CF6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0CFA52A929DD7317003CF6E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F47F912952705FC35EC80E5 /* Pods-OneLoveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLoveApp.release.xcconfig"; path = "Target Support Files/Pods-OneLoveApp/Pods-OneLoveApp.release.xcconfig"; sourceTree = "<group>"; };
+		D65CA376F2CDF7AD1BEB6388 /* Pods-OneLoveApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLoveApp.debug.xcconfig"; path = "Target Support Files/Pods-OneLoveApp/Pods-OneLoveApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FAA1494A525E8301CA28A4D4 /* Pods_OneLoveApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneLoveApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CFA529529DD7314003CF6E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F582EE1FB451DC59F60857 /* Pods_OneLoveApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CFA528F29DD7314003CF6E8 = {
+			isa = PBXGroup;
+			children = (
+				0CFA529A29DD7314003CF6E8 /* OneLoveApp */,
+				0CFA529929DD7314003CF6E8 /* Products */,
+				14BDB81C4B24AB6F95514B73 /* Pods */,
+				4ED902B8F50B3FE5CA92C718 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0CFA529929DD7314003CF6E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA529829DD7314003CF6E8 /* OneLoveApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CFA529A29DD7314003CF6E8 /* OneLoveApp */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA52AF29DD8184003CF6E8 /* Application */,
+				0CFA52B529DD8458003CF6E8 /* Food */,
+				0CFA52B429DD8224003CF6E8 /* Resources */,
+			);
+			path = OneLoveApp;
+			sourceTree = "<group>";
+		};
+		0CFA52AF29DD8184003CF6E8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA52B029DD819B003CF6E8 /* Model */,
+				0CFA52B129DD81A2003CF6E8 /* View */,
+				0CFA52B229DD81A9003CF6E8 /* Controller */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0CFA52B029DD819B003CF6E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0CFA52B129DD81A2003CF6E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA52A629DD7317003CF6E8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0CFA52B229DD81A9003CF6E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA529B29DD7314003CF6E8 /* AppDelegate.swift */,
+				0CFA529D29DD7314003CF6E8 /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0CFA52B429DD8224003CF6E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA52A429DD7317003CF6E8 /* Assets.xcassets */,
+				0CFA52A929DD7317003CF6E8 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0CFA52B529DD8458003CF6E8 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA52B829DD847F003CF6E8 /* Model */,
+				0CFA52B729DD8472003CF6E8 /* View */,
+				0CFA52B629DD8466003CF6E8 /* Controller */,
+				0CFA529F29DD7314003CF6E8 /* ViewController.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		0CFA52B629DD8466003CF6E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0CFA52B729DD8472003CF6E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0CFA52B829DD847F003CF6E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14BDB81C4B24AB6F95514B73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D65CA376F2CDF7AD1BEB6388 /* Pods-OneLoveApp.debug.xcconfig */,
+				8F47F912952705FC35EC80E5 /* Pods-OneLoveApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4ED902B8F50B3FE5CA92C718 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1494A525E8301CA28A4D4 /* Pods_OneLoveApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CFA529729DD7314003CF6E8 /* OneLoveApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CFA52AC29DD7317003CF6E8 /* Build configuration list for PBXNativeTarget "OneLoveApp" */;
+			buildPhases = (
+				C747323192682BD845606951 /* [CP] Check Pods Manifest.lock */,
+				0CFA529429DD7314003CF6E8 /* Sources */,
+				0CFA529529DD7314003CF6E8 /* Frameworks */,
+				0CFA529629DD7314003CF6E8 /* Resources */,
+				367D1E88DA623C7CA2A5C4CA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneLoveApp;
+			productName = OneLoveApp;
+			productReference = 0CFA529829DD7314003CF6E8 /* OneLoveApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CFA529029DD7314003CF6E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					0CFA529729DD7314003CF6E8 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 0CFA529329DD7314003CF6E8 /* Build configuration list for PBXProject "OneLoveApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0CFA528F29DD7314003CF6E8;
+			productRefGroup = 0CFA529929DD7314003CF6E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CFA529729DD7314003CF6E8 /* OneLoveApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CFA529629DD7314003CF6E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFA52A829DD7317003CF6E8 /* LaunchScreen.storyboard in Resources */,
+				0CFA52A529DD7317003CF6E8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		367D1E88DA623C7CA2A5C4CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneLoveApp/Pods-OneLoveApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneLoveApp/Pods-OneLoveApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneLoveApp/Pods-OneLoveApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C747323192682BD845606951 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneLoveApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CFA529429DD7314003CF6E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFA52A029DD7314003CF6E8 /* ViewController.swift in Sources */,
+				0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */,
+				0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0CFA52A629DD7317003CF6E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CFA52A729DD7317003CF6E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0CFA52AA29DD7317003CF6E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0CFA52AB29DD7317003CF6E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0CFA52AD29DD7317003CF6E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D65CA376F2CDF7AD1BEB6388 /* Pods-OneLoveApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHYY32KSS7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneLoveApp/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruslandalgatov.OneLoveApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0CFA52AE29DD7317003CF6E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F47F912952705FC35EC80E5 /* Pods-OneLoveApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHYY32KSS7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneLoveApp/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruslandalgatov.OneLoveApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CFA529329DD7314003CF6E8 /* Build configuration list for PBXProject "OneLoveApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CFA52AA29DD7317003CF6E8 /* Debug */,
+				0CFA52AB29DD7317003CF6E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CFA52AC29DD7317003CF6E8 /* Build configuration list for PBXNativeTarget "OneLoveApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CFA52AD29DD7317003CF6E8 /* Debug */,
+				0CFA52AE29DD7317003CF6E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CFA529029DD7314003CF6E8 /* Project object */;
+}
