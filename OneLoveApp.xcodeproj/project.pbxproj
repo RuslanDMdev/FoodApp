@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529B29DD7314003CF6E8 /* AppDelegate.swift */; };
 		0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529D29DD7314003CF6E8 /* SceneDelegate.swift */; };
-		0CFA52A029DD7314003CF6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529F29DD7314003CF6E8 /* ViewController.swift */; };
+		0CFA52A029DD7314003CF6E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529F29DD7314003CF6E8 /* MainViewController.swift */; };
 		0CFA52A529DD7317003CF6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CFA52A429DD7317003CF6E8 /* Assets.xcassets */; };
 		0CFA52A829DD7317003CF6E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CFA52A629DD7317003CF6E8 /* LaunchScreen.storyboard */; };
 		0CFA52BA29DD857E003CF6E8 /* MenuViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52B929DD857E003CF6E8 /* MenuViewHeader.swift */; };
 		0CFA52BC29DD93A6003CF6E8 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52BB29DD93A6003CF6E8 /* BannerView.swift */; };
-		0CFA52BE29DDA077003CF6E8 /* navViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52BD29DDA077003CF6E8 /* navViewController.swift */; };
 		0CFA52C029DDA2D6003CF6E8 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52BF29DDA2D6003CF6E8 /* MenuTableView.swift */; };
+		0CFA52C429DEC793003CF6E8 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52C329DEC793003CF6E8 /* MenuTableViewCell.swift */; };
+		0CFA52C629DEC904003CF6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52C529DEC904003CF6E8 /* ViewController.swift */; };
+		0CFA52C829DEE63B003CF6E8 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52C729DEE63B003CF6E8 /* CollectionViewController.swift */; };
+		0CFA52CB29DEE673003CF6E8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52CA29DEE673003CF6E8 /* CollectionViewCell.swift */; };
+		0CFA52CD29DEECAD003CF6E8 /* TwoColumnCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52CC29DEECAD003CF6E8 /* TwoColumnCollectionViewController.swift */; };
+		0CFA52CF29DEF204003CF6E8 /* FoodDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52CE29DEF204003CF6E8 /* FoodDataModel.swift */; };
 		B8F582EE1FB451DC59F60857 /* Pods_OneLoveApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA1494A525E8301CA28A4D4 /* Pods_OneLoveApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,14 +28,19 @@
 		0CFA529829DD7314003CF6E8 /* OneLoveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLoveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFA529B29DD7314003CF6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CFA529D29DD7314003CF6E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0CFA529F29DD7314003CF6E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CFA529F29DD7314003CF6E8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0CFA52A429DD7317003CF6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CFA52A729DD7317003CF6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CFA52A929DD7317003CF6E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CFA52B929DD857E003CF6E8 /* MenuViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewHeader.swift; sourceTree = "<group>"; };
 		0CFA52BB29DD93A6003CF6E8 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
-		0CFA52BD29DDA077003CF6E8 /* navViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navViewController.swift; sourceTree = "<group>"; };
 		0CFA52BF29DDA2D6003CF6E8 /* MenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
+		0CFA52C329DEC793003CF6E8 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		0CFA52C529DEC904003CF6E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CFA52C729DEE63B003CF6E8 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		0CFA52CA29DEE673003CF6E8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		0CFA52CC29DEECAD003CF6E8 /* TwoColumnCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnCollectionViewController.swift; sourceTree = "<group>"; };
+		0CFA52CE29DEF204003CF6E8 /* FoodDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDataModel.swift; sourceTree = "<group>"; };
 		8F47F912952705FC35EC80E5 /* Pods-OneLoveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLoveApp.release.xcconfig"; path = "Target Support Files/Pods-OneLoveApp/Pods-OneLoveApp.release.xcconfig"; sourceTree = "<group>"; };
 		D65CA376F2CDF7AD1BEB6388 /* Pods-OneLoveApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLoveApp.debug.xcconfig"; path = "Target Support Files/Pods-OneLoveApp/Pods-OneLoveApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA1494A525E8301CA28A4D4 /* Pods_OneLoveApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneLoveApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +142,8 @@
 		0CFA52B629DD8466003CF6E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0CFA529F29DD7314003CF6E8 /* ViewController.swift */,
+				0CFA529F29DD7314003CF6E8 /* MainViewController.swift */,
+				0CFA52C529DEC904003CF6E8 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -140,10 +151,11 @@
 		0CFA52B729DD8472003CF6E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0CFA52C929DEE654003CF6E8 /* CollectionView */,
 				0CFA52B929DD857E003CF6E8 /* MenuViewHeader.swift */,
 				0CFA52BB29DD93A6003CF6E8 /* BannerView.swift */,
-				0CFA52BD29DDA077003CF6E8 /* navViewController.swift */,
 				0CFA52BF29DDA2D6003CF6E8 /* MenuTableView.swift */,
+				0CFA52C329DEC793003CF6E8 /* MenuTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,8 +163,19 @@
 		0CFA52B829DD847F003CF6E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0CFA52CE29DEF204003CF6E8 /* FoodDataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0CFA52C929DEE654003CF6E8 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA52CA29DEE673003CF6E8 /* CollectionViewCell.swift */,
+				0CFA52C729DEE63B003CF6E8 /* CollectionViewController.swift */,
+				0CFA52CC29DEECAD003CF6E8 /* TwoColumnCollectionViewController.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		14BDB81C4B24AB6F95514B73 /* Pods */ = {
@@ -286,12 +309,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFA52CB29DEE673003CF6E8 /* CollectionViewCell.swift in Sources */,
+				0CFA52CF29DEF204003CF6E8 /* FoodDataModel.swift in Sources */,
+				0CFA52C829DEE63B003CF6E8 /* CollectionViewController.swift in Sources */,
 				0CFA52C029DDA2D6003CF6E8 /* MenuTableView.swift in Sources */,
+				0CFA52C429DEC793003CF6E8 /* MenuTableViewCell.swift in Sources */,
+				0CFA52C629DEC904003CF6E8 /* ViewController.swift in Sources */,
 				0CFA52BC29DD93A6003CF6E8 /* BannerView.swift in Sources */,
 				0CFA52BA29DD857E003CF6E8 /* MenuViewHeader.swift in Sources */,
-				0CFA52BE29DDA077003CF6E8 /* navViewController.swift in Sources */,
-				0CFA52A029DD7314003CF6E8 /* ViewController.swift in Sources */,
+				0CFA52A029DD7314003CF6E8 /* MainViewController.swift in Sources */,
 				0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */,
+				0CFA52CD29DEECAD003CF6E8 /* TwoColumnCollectionViewController.swift in Sources */,
 				0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,15 +9,32 @@ import UIKit
 
 class BannerView: UIView {
     
-    //MARK: - init
+//    //MARK: - init
+//
+//    init(){
+//        super.init(frame: .zero)
+//        setupView()
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
-    init(){
-        super.init(frame: .zero)
-        setupView()
+    private var totalHeight: CGFloat = 0
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+    }
+
+    init(height: CGFloat) {
+        let frame = CGRect(x: .zero, y: .zero, width: .zero, height: height)
+        super.init(frame: frame)
+        totalHeight = height
+        setupView()
     }
     
 
@@ -28,6 +45,7 @@ class BannerView: UIView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.spacing = 16
+//        stack.layer.cornerRadius = 15
         stack.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         stack.isLayoutMarginsRelativeArrangement = true
         return stack
@@ -36,7 +54,8 @@ class BannerView: UIView {
     lazy private var scrollView: UIScrollView = {
         let scroll = UIScrollView()
         scroll.addSubview(stackView)
-        scroll.backgroundColor = .secondarySystemBackground
+        scroll.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.8196078431, blue: 1, alpha: 1)
+        scroll.layer.cornerRadius = 15
         scroll.showsHorizontalScrollIndicator = false
         return scroll
     }()
@@ -46,14 +65,16 @@ class BannerView: UIView {
     private func setupView() {
         addSubview(scrollView)
         setupConstraints()
-        
     }
     
     private func setupConstraints() {
         scrollView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().offset(15)
-            make.top.equalToSuperview().offset(58)
-            make.height.equalTo(192.3)
+            make.leading.equalToSuperview().offset(15)
+            make.trailing.equalToSuperview().inset(15)
+            make.top.equalToSuperview().offset(16)
+//            make.height.equalTo(192.3)
+            make.height.equalTo(totalHeight)
+
         }
         
         stackView.snp.makeConstraints { make in
