@@ -2,16 +2,16 @@
 //  FoodDataModel.swift
 //  OneLoveApp
 //
-//  Created by Ruslan Dalgatov on 06.04.2023.
+//  Created by Ruslan Dalgatov on 07.04.2023.
 //
 
 import Foundation
 
-struct FoodDataModel: Decodable {
+struct Food: Decodable {
     
     let id: Int
     let name: String
-    let description: String
+    let weight: String
     let price: Int
     let image: URL
     let foodType: String
