@@ -8,6 +8,7 @@ target 'OneLoveApp' do
   # Pods for OneLoveApp
 
 	pod 'SnapKit'
+	pod 'SDWebImage'
 
 
 end
