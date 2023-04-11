@@ -12,9 +12,7 @@ class CustomCollectionView: UICollectionView {
     // MARK: - Private properties
 
     private let cellReuseIdentifier = "CategoryCell"
-    private var categories: Category = []
-    
-    
+    var categories: Category = []    
     //MARK: - init
 
     init() {
@@ -24,7 +22,6 @@ class CustomCollectionView: UICollectionView {
         layout.scrollDirection = .vertical
         
         super.init(frame: .zero, collectionViewLayout: layout)
-        
         backgroundColor = .white
         register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: cellReuseIdentifier)
         dataSource = self
@@ -38,6 +35,7 @@ class CustomCollectionView: UICollectionView {
     }
     
     // MARK: - Private methods
+
     private func fetchData() {
         guard let url = URL(string: "https://run.mocky.io/v3/4cc3458f-d205-493a-a9b8-0242619d073a") else {
             return
@@ -54,11 +52,14 @@ class CustomCollectionView: UICollectionView {
                 DispatchQueue.main.async {
                     self?.categories = categories
                     self?.reloadData()
+                    print(categories.count)
+
                 }
             } catch {
                 print(error)
             }
         }.resume()
+        
     }
 }
 
@@ -83,5 +84,6 @@ extension CustomCollectionView: UICollectionViewDelegateFlowLayout {
         let cellwidth = (UIScreen.main.bounds.width / 2) - 25
         let cellheight = cellwidth + 25
         return CGSize(width: cellwidth, height: cellheight)
+        
     }
 }

@@ -102,7 +102,7 @@ private let whatsAppButton: UIButton = {
     button.tintColor = .black
     button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
     button.setTitle("8 800 222-26-86", for: .normal)
-    button.setImage(UIImage(named: "whatsapp"), for: .normal)
+    button.setImage(UIImage(named: "whatsAppIcon"), for: .normal)
     button.setTitleColor(.white, for: .normal)
     return button
 }()
