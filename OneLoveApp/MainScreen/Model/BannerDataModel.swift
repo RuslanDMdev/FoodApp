@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct BannerDataModel: Decodable {
-    
-    let id: Int
-    let name: String
-    let description: String
-    let image: URL
+// MARK: - BannerModelElement
+struct BannerModelElement: Codable {
+    let image: String
+    let type: String
 }
+
+typealias BannerModel = [BannerModelElement]

@@ -97,34 +97,44 @@ private let stackViewContactUs: UIStackView = {
     return stackView
 }()
 
-private let whatsAppButton: UIButton = {
-    let button = UIButton(type: .system)
-    button.tintColor = .black
-    button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-    button.setTitle("8 800 222-26-86", for: .normal)
-    button.setImage(UIImage(named: "whatsAppIcon"), for: .normal)
-    button.setTitleColor(.white, for: .normal)
-    return button
+private let whatsAppImage: UIImageView = {
+    let view = UIImageView()
+    view.image = UIImage(named: "whatsapp-logo")
+    return view
+}()
+private let whatsAppLabel: UILabel = {
+    let label = UILabel()
+    label.text = "8 800 222-26-86"
+    label.textColor = .white
+    label.font = UIFont.systemFont(ofSize: 14)
+    return label
 }()
 
-private let instagrammButton: UIButton = {
-    let button = UIButton(type: .system)
-    button.tintColor = .black
-    button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-    button.setTitle("@onelove", for: .normal)
-    button.setImage(UIImage(named: "instagram"), for: .normal)
-    button.setTitleColor(.white, for: .normal)
-    return button
+
+private let instagrammImage: UIImageView = {
+    let view = UIImageView()
+    view.image = UIImage(named: "insta-logo")
+    return view
+}()
+private let instagrammLabel: UILabel = {
+    let label = UILabel()
+    label.text = "@onelove"
+    label.textColor = .white
+    label.font = UIFont.systemFont(ofSize: 14)
+    return label
 }()
 
-private let vkButton: UIButton = {
-    let button = UIButton(type: .system)
-    button.tintColor = .black
-    button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-    button.setTitle("oneLove", for: .normal)
-    button.setImage(UIImage(named: "vk"), for: .normal)
-    button.setTitleColor(.white, for: .normal)
-    return button
+private let vkImage: UIImageView = {
+    let view = UIImageView()
+    view.image = UIImage(named: "vk-logo")
+    return view
+}()
+private let vkLabel: UILabel = {
+    let label = UILabel()
+    label.text = "oneLove"
+    label.textColor = .white
+    label.font = UIFont.systemFont(ofSize: 14)
+    return label
 }()
 
 // MARK: - extension
@@ -134,7 +144,7 @@ private let vkButton: UIButton = {
             view.backgroundColor = #colorLiteral(red: 0.5058823529, green: 0.2823529412, blue: 0.5921568627, alpha: 1)
             view.snp.makeConstraints { make in
                 make.edges.equalToSuperview()
-                make.height.equalTo(700)
+                make.height.equalTo(600)
             }
         
             view.addSubview(imageView)
@@ -163,13 +173,39 @@ private let vkButton: UIButton = {
                 make.left.equalToSuperview().offset(32)
             }
             view.addSubview(stackViewContactUs)
-            stackViewContactUs.addArrangedSubview(whatsAppButton)
-            stackViewContactUs.addArrangedSubview(instagrammButton)
-            stackViewContactUs.addArrangedSubview(vkButton)
+            stackViewContactUs.addArrangedSubview(whatsAppImage)
+            stackViewContactUs.addArrangedSubview(instagrammImage)
+            stackViewContactUs.addArrangedSubview(vkImage)
+            view.addSubview(whatsAppLabel)
+            view.addSubview(instagrammLabel)
+            view.addSubview(vkLabel)
             stackViewContactUs.snp.makeConstraints { make in
                 make.top.equalTo(contactUsLabel.snp.bottom).offset(18)
                 make.left.equalToSuperview().offset(32)
             }
-
+            
+            whatsAppImage.snp.updateConstraints { make in
+                make.width.height.equalTo(24)
+            }
+            whatsAppLabel.snp.makeConstraints { make in
+                make.left.equalTo(whatsAppImage.snp.right).offset(11)
+                make.centerY.equalTo(whatsAppImage)
+            }
+            
+            instagrammImage.snp.updateConstraints { make in
+                make.width.height.equalTo(24)
+            }
+            instagrammLabel.snp.makeConstraints { make in
+                make.left.equalTo(instagrammImage.snp.right).offset(11)
+                make.centerY.equalTo(instagrammImage)
+            }
+            
+            vkImage.snp.updateConstraints { make in
+                make.width.height.equalTo(24)
+            }
+            vkLabel.snp.makeConstraints { make in
+                make.left.equalTo(vkImage.snp.right).offset(11)
+                make.centerY.equalTo(vkImage)
+            }
         }
     }

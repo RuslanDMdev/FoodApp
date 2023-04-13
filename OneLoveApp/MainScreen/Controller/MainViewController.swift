@@ -12,13 +12,14 @@ class MainViewController: UIViewController {
     // MARK: - Private properties
     
     private let menuViewHeader = MenuViewHeader()
-    private let banner = BannerView(height: 176)
-    private let collectionView = CustomCollectionView()
+    private let banner = BannerCollectionView()
+    private let collectionView = CategoryCollectionView()
     private let bottomElements = BottomView()
-    var heightColView = 1000
+    var heightColView = (UIScreen.main.bounds.width / 2) - 25
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
+        scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         return scrollView
     }()
@@ -33,16 +34,67 @@ class MainViewController: UIViewController {
     //MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchData()
         initialize()
     }
 
-    
+    //MARK: - Private constants
+
+    private enum UIConstants{
+        static let cellwidth = (UIScreen.main.bounds.width / 2) - 25
+        static let heightOfCell = cellwidth + 36
+        static let cellsHeight = (UIScreen.main.bounds.width / 2) - 25
+
+    }
 
 }
 // MARK: - Private extensions
 
 private extension MainViewController {
+    
+    func fetchData() {
+        guard let url = URL(string: "https://run.mocky.io/v3/01fb73f0-63d0-4891-aa43-dde19bed2ccb") else {          // 6 элементов
+//        guard let url = URL(string: "https://run.mocky.io/v3/575483fc-34bc-48ec-92cd-43512b5ecda1") else {          // 9 элементов
+
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let categories = try decoder.decode(Category.self, from: data)
+                DispatchQueue.main.async {
+                    self?.collectionView.categories = categories
+                    self?.collectionView.reloadData()
+                    self?.getHeight()
+                }
+            } catch {
+                print(error)
+            }
+        }.resume()
+        
+    }
+    
+    func getHeight(){
+        if collectionView.categories.count%2 == 0 {
+            let count = (collectionView.categories.count) / 2
+            
+            collectionView.snp.updateConstraints { make in
+                make.height.equalTo((Int(UIConstants.heightOfCell)) * count + count * 8)
+            }
+        }else{
+            let count = (collectionView.categories.count + 1) / 2
+            collectionView.snp.updateConstraints { make in
+                make.height.equalTo((Int(UIConstants.heightOfCell)) * count + count * 8 )
+            }
+        }
+    }
     func initialize(){
+        view.backgroundColor = #colorLiteral(red: 0.5058823529, green: 0.2823529412, blue: 0.5921568627, alpha: 1)
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.addSubview(menuViewHeader)
@@ -51,7 +103,8 @@ private extension MainViewController {
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(84)
         }
-        
+        menuViewHeader.prifileButton.addTarget(self, action: #selector(profileButtonTapped), for: .touchUpInside)
+
         view.addSubview(scrollView)
         scrollView.backgroundColor = .white
         scrollView.snp.makeConstraints { make in
@@ -71,22 +124,12 @@ private extension MainViewController {
             make.height.equalTo(240)
             make.top.equalToSuperview().offset(16)
         }
-        
-//        let numberOfElementsInArray = collectionView.categories.count
-//        if numberOfElementsInArray % 2 == 0 {
-//            print("целое чисто \(heightColView)")
-//            heightColView = ((Int(UIScreen.main.bounds.width) / 2) - 25) * numberOfElementsInArray + 100
-//        } else {
-//            let roundedNumberOfElements = (numberOfElementsInArray / 2) + 1
-//            heightColView = ((Int(UIScreen.main.bounds.width) / 2) - 25) * roundedNumberOfElements + 100
-//            print(heightColView)
-//        }
+
         stackView.addArrangedSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.right.equalTo(view).inset(15)
             make.left.equalTo(view).offset(15)
-            make.height.equalTo(((UIScreen.main.bounds.width / 2) - 25) * 3 + 100)
-//            make.height.equalTo(heightColView)
+            make.height.equalTo(190)
             make.top.equalTo(banner.snp.bottom).offset(32)
         }
         
@@ -95,5 +138,14 @@ private extension MainViewController {
             make.top.equalTo(collectionView.snp.bottom).offset(24)
             make.left.right.equalTo(view)
         }
+    }
+    // MARK: - Move to another controller
+    @objc private func profileButtonTapped() {
+        navigationController?.popViewController(animated: true)
+        let profileVC = PagePersonViewController()
+        let navVC = UINavigationController(rootViewController: profileVC)
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true)
+        
     }
 }

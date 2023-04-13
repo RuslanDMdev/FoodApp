@@ -43,7 +43,7 @@ class MenuViewHeader: UIView {
         return button
     }()
     
-    private let prifileButton: UIButton = {
+    let prifileButton: UIButton = {
         let button = UIButton()
         let icon = UIImage(named: "profile")
         button.semanticContentAttribute = .forceRightToLeft

@@ -1,32 +1,29 @@
 //
-//  CustomCollectionView.swift
+//  File.swift
 //  OneLoveApp
 //
-//  Created by Ruslan Dalgatov on 10.04.2023.
+//  Created by Ruslan Dalgatov on 11.04.2023.
 //
 
 import UIKit
 import SnapKit
 
-class CustomCollectionView: UICollectionView {
+class BannerCollectionView: UICollectionView {
     // MARK: - Private properties
 
-    private let cellReuseIdentifier = "CategoryCell"
-    var categories: Category = []    
+    private let cellReuseIdentifier = "BannerCVCell"
+    var banners: BannerModel = []
     //MARK: - init
 
     init() {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 10
-        layout.scrollDirection = .vertical
-        
+
+        layout.scrollDirection = .horizontal
         super.init(frame: .zero, collectionViewLayout: layout)
-        backgroundColor = .white
-        register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: cellReuseIdentifier)
+        register(BannerCVCell.self, forCellWithReuseIdentifier: cellReuseIdentifier)
         dataSource = self
+        showsHorizontalScrollIndicator = false
         delegate = self
-        
         fetchData()
     }
     
@@ -35,9 +32,8 @@ class CustomCollectionView: UICollectionView {
     }
     
     // MARK: - Private methods
-
-    private func fetchData() {
-        guard let url = URL(string: "https://run.mocky.io/v3/4cc3458f-d205-493a-a9b8-0242619d073a") else {
+    func fetchData() {
+        guard let url = URL(string: "https://run.mocky.io/v3/1ca0b82c-eb65-4e13-84b9-9c764aa4667f") else {
             return
         }
         
@@ -48,12 +44,10 @@ class CustomCollectionView: UICollectionView {
             
             do {
                 let decoder = JSONDecoder()
-                let categories = try decoder.decode(Category.self, from: data)
+                let banner = try decoder.decode(BannerModel.self, from: data)
                 DispatchQueue.main.async {
-                    self?.categories = categories
+                    self?.banners = banner
                     self?.reloadData()
-                    print(categories.count)
-
                 }
             } catch {
                 print(error)
@@ -65,25 +59,26 @@ class CustomCollectionView: UICollectionView {
 
 // MARK: - Extensions
 
-extension CustomCollectionView: UICollectionViewDataSource {
+extension BannerCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
+        return banners.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
-        cell.category = categories[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! BannerCVCell
+        cell.banner = banners[indexPath.item]
         return cell
     }
 }
 
-extension CustomCollectionView: UICollectionViewDelegateFlowLayout {
+extension BannerCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellwidth = (UIScreen.main.bounds.width / 2) - 25
-        let cellheight = cellwidth + 25
+        let cellwidth = (UIScreen.main.bounds.width) - 30
+        let cellheight = cellwidth / 2
         return CGSize(width: cellwidth, height: cellheight)
         
     }
+
 }
