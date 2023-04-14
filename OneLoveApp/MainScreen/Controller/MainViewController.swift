@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainViewController: UIViewController {
 
@@ -15,22 +16,29 @@ class MainViewController: UIViewController {
     private let banner = BannerCollectionView()
     private let collectionView = CategoryCollectionView()
     private let bottomElements = BottomView()
-    var heightColView = (UIScreen.main.bounds.width / 2) - 25
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = true
         scrollView.showsVerticalScrollIndicator = false
+        scrollView.alwaysBounceVertical = true
         return scrollView
     }()
     
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 40
+        stackView.spacing = 24
         return stackView
     }()
     
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Что будете заказывать"
+        label.textColor = #colorLiteral(red: 0.5058823529, green: 0.2823529412, blue: 0.5921568627, alpha: 1)
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        return label
+    }()
     //MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,8 +122,9 @@ private extension MainViewController {
         scrollView.addSubview(stackView)
         stackView.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.leading.trailing.equalToSuperview().inset(15)
-            make.bottom.equalToSuperview().inset(15)
+            make.left.equalTo(view).offset(15)
+            make.right.equalTo(view).inset(15)
+            make.bottom.equalToSuperview()
         }
         
         stackView.addArrangedSubview(banner)
@@ -124,24 +133,39 @@ private extension MainViewController {
             make.height.equalTo(240)
             make.top.equalToSuperview().offset(16)
         }
+        
+        stackView.addArrangedSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(banner.snp.bottom).offset(24)
+            make.height.equalTo(22)
+            make.left.equalToSuperview().offset(15)
+        }
 
         stackView.addArrangedSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.right.equalTo(view).inset(15)
             make.left.equalTo(view).offset(15)
             make.height.equalTo(190)
-            make.top.equalTo(banner.snp.bottom).offset(32)
+            make.top.equalTo(titleLabel.snp.bottom).offset(32)
         }
+        
+//        stackView.addArrangedSubview(collectionView)
+//        collectionView.snp.makeConstraints { make in
+//            make.right.equalTo(view).inset(15)
+//            make.left.equalTo(view).offset(15)
+//            make.height.equalTo(190)
+//            make.top.equalTo(banner.snp.bottom).offset(32)
+//        }
         
         stackView.addArrangedSubview(bottomElements)
         bottomElements.snp.makeConstraints { make in
             make.top.equalTo(collectionView.snp.bottom).offset(24)
             make.left.right.equalTo(view)
+//            make.bottom.equalTo(view)
         }
     }
     // MARK: - Move to another controller
     @objc private func profileButtonTapped() {
-        navigationController?.popViewController(animated: true)
         let profileVC = PagePersonViewController()
         let navVC = UINavigationController(rootViewController: profileVC)
         navVC.modalPresentationStyle = .fullScreen

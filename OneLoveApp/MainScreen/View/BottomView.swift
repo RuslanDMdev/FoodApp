@@ -11,6 +11,7 @@ import SnapKit
 
 
 class BottomView: UIView {
+    
 //MARK: - init
     
     init(){

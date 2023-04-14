@@ -12,7 +12,15 @@ class CategoryCollectionView: UICollectionView {
     // MARK: - Private properties
 
     private let cellReuseIdentifier = "CategoryCell"
-    var categories: Category = []    
+    var categories: Category = []
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Что будете заказывать"
+        label.textColor = #colorLiteral(red: 0.5058823529, green: 0.2823529412, blue: 0.5921568627, alpha: 1)
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        return label
+    }()
     //MARK: - init
 
     init() {
@@ -23,7 +31,6 @@ class CategoryCollectionView: UICollectionView {
         register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: cellReuseIdentifier)
         dataSource = self
         delegate = self
-        
     }
     
     required init?(coder: NSCoder) {
@@ -57,7 +64,7 @@ extension CategoryCollectionView: UICollectionViewDelegateFlowLayout {
         return CGSize(width: cellwidth, height: cellheight)
         
     }
-    
+
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let selectedCell = collectionView.cellForItem(at: indexPath) as! BannerCVCell
 //        let typeOfFood = selectedCell.banner?.type

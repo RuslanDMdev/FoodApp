@@ -13,8 +13,8 @@ class BannerCollectionView: UICollectionView {
 
     private let cellReuseIdentifier = "BannerCVCell"
     var banners: BannerModel = []
+    
     //MARK: - init
-
     init() {
         let layout = UICollectionViewFlowLayout()
 

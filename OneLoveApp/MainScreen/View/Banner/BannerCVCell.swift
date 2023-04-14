@@ -53,6 +53,7 @@ class BannerCVCell: UICollectionViewCell {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openBrowser))
               contentView.addGestureRecognizer(tapGesture)
+
     }
     
     required init?(coder: NSCoder) {
