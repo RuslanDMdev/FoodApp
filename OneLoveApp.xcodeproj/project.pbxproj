@@ -23,7 +23,6 @@
 		0CFA52A529DD7317003CF6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CFA52A429DD7317003CF6E8 /* Assets.xcassets */; };
 		0CFA52A829DD7317003CF6E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CFA52A629DD7317003CF6E8 /* LaunchScreen.storyboard */; };
 		0CFA52BA29DD857E003CF6E8 /* MenuViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52B929DD857E003CF6E8 /* MenuViewHeader.swift */; };
-		0CFA52BC29DD93A6003CF6E8 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52BB29DD93A6003CF6E8 /* BannerView.swift */; };
 		0CFA52CF29DEF204003CF6E8 /* BannerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52CE29DEF204003CF6E8 /* BannerDataModel.swift */; };
 		0CFA52D329DF0BA1003CF6E8 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52D229DF0BA1003CF6E8 /* BottomView.swift */; };
 		0CFA52DA29E00769003CF6E8 /* FoodDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52D929E00769003CF6E8 /* FoodDataModel.swift */; };
@@ -50,7 +49,6 @@
 		0CFA52A729DD7317003CF6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CFA52A929DD7317003CF6E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CFA52B929DD857E003CF6E8 /* MenuViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewHeader.swift; sourceTree = "<group>"; };
-		0CFA52BB29DD93A6003CF6E8 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		0CFA52CE29DEF204003CF6E8 /* BannerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDataModel.swift; sourceTree = "<group>"; };
 		0CFA52D229DF0BA1003CF6E8 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		0CFA52D929E00769003CF6E8 /* FoodDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDataModel.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 		0CA4023F29E5874F003E282F /* Banner */ = {
 			isa = PBXGroup;
 			children = (
-				0CFA52BB29DD93A6003CF6E8 /* BannerView.swift */,
 				0CA4023C29E5836E003E282F /* BannerCVCell.swift */,
 				0CA4024029E58775003E282F /* BannerCollectionView.swift */,
 			);
@@ -221,9 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				0CFA52B929DD857E003CF6E8 /* MenuViewHeader.swift */,
-				0CFA52D229DF0BA1003CF6E8 /* BottomView.swift */,
-				0CA4023E29E58739003E282F /* Category */,
 				0CA4023F29E5874F003E282F /* Banner */,
+				0CA4023E29E58739003E282F /* Category */,
+				0CFA52D229DF0BA1003CF6E8 /* BottomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -411,7 +408,6 @@
 				0CA4024D29E7FC6D003E282F /* ProfileCard.swift in Sources */,
 				0C52243529E42D740017AAAE /* CategoryCollectionView.swift in Sources */,
 				0CA4024929E7F94D003E282F /* PagePersonViewController.swift in Sources */,
-				0CFA52BC29DD93A6003CF6E8 /* BannerView.swift in Sources */,
 				0CFA52BA29DD857E003CF6E8 /* MenuViewHeader.swift in Sources */,
 				0CFA52A029DD7314003CF6E8 /* MainViewController.swift in Sources */,
 				0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */,
