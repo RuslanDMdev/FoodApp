@@ -25,6 +25,7 @@ class BannerCollectionView: UICollectionView {
         showsHorizontalScrollIndicator = false
         delegate = self
         fetchData()
+//        backgroundColor = .green
     }
     
     required init?(coder: NSCoder) {

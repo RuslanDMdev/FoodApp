@@ -52,6 +52,7 @@ class MainViewController: UIViewController {
         static let cellwidth = (UIScreen.main.bounds.width / 2) - 25
         static let heightOfCell = cellwidth + 36
         static let cellsHeight = (UIScreen.main.bounds.width / 2) - 25
+        static let bannerHeight = ((UIScreen.main.bounds.width) - 30 ) / 2
 
     }
 
@@ -130,8 +131,9 @@ private extension MainViewController {
         stackView.addArrangedSubview(banner)
         banner.snp.makeConstraints { make in
             make.left.right.equalTo(view)
-            make.height.equalTo(240)
-            make.top.equalToSuperview().offset(16)
+            make.height.equalTo(UIConstants.bannerHeight)
+            make.top.equalToSuperview().offset(22)
+            
         }
         
         stackView.addArrangedSubview(titleLabel)
