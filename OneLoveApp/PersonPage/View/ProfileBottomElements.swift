@@ -21,7 +21,7 @@ class ProfileBottomElements: UIView{
     
     // MARK: - properties
     
-    private let LogOutButton: UIButton = {
+    let LogOutButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.8980392157, blue: 0.8980392157, alpha: 1)
         button.setTitleColor(.black, for: .normal)
@@ -58,7 +58,7 @@ private extension ProfileBottomElements{
         addSubview(LogOutButton)
         addSubview(contackUsLabel)
         addSubview(deleteAccauntLabel)
-        
+
         LogOutButton.layer.cornerRadius = 12
         LogOutButton.snp.makeConstraints { make in
             make.top.equalToSuperview()

@@ -1,31 +1,42 @@
 //
-//  PagePersonViewController.swift
+//  AuthPagePersonViewController.swift
 //  OneLoveApp
 //
-//  Created by Ruslan Dalgatov on 13.04.2023.
+//  Created by Ruslan Dalgatov on 17.04.2023.
 //
 
 import UIKit
 
-class PagePersonViewController: UIViewController {
-    
-    private let profileElement = ProfileCard()
-    private let profileBottomElement = ProfileBottomElements()
+class AuthPagePersonViewController: UIViewController {
+
+    private let AuthprofileElement = AuthProfileCard()
+    private let textField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "+7(___)-___-__-__"
+        textField.textAlignment = .left
+        textField.keyboardType = .phonePad
+        return textField
+    }()
     //MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
     }
+    
+    //MARK: - Private constants
 
+    private enum UIConstants{
+        static let HeightAuthprofileElement = UIScreen.main.bounds.height - 306
+    }
 }
 // MARK: - Private methods
 
-private extension PagePersonViewController {
+private extension AuthPagePersonViewController {
     func initialize(){
         view.backgroundColor = .white
         let titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        titleLabel.text = "Профиль"
+        titleLabel.text = "Авторизация"
         navigationItem.titleView = titleLabel
         let backButton = UIButton()
         backButton.setImage(UIImage(named: "arrow-left"), for: .normal)
@@ -36,22 +47,21 @@ private extension PagePersonViewController {
             make.width.height.equalTo(26)
         }
         
-        view.addSubview(profileElement)
-        view.addSubview(profileBottomElement)
-
-        profileElement.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.height.equalTo(225)
+        view.addSubview(AuthprofileElement)
+        view.addSubview(textField)
+        textField.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(100)
+            make.left.equalToSuperview().offset(24)
+            make.right.equalToSuperview().inset(24)
         }
-        
-        profileBottomElement.snp.makeConstraints { make in
-            make.top.equalTo(profileElement.snp.bottom).offset(112)
-            make.left.equalToSuperview().offset(15)
-            make.right.equalToSuperview().inset(15)
-            make.height.equalTo(300)
+        AuthprofileElement.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(306)
+            make.left.equalToSuperview().offset(24)
+            make.right.equalToSuperview().inset(24)
+            make.height.equalTo(UIConstants.HeightAuthprofileElement)
+
         }
-        profileBottomElement.LogOutButton.addTarget(self, action: #selector(logOutButtonTapped), for: .touchUpInside)
+        AuthprofileElement.LogInButton.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
 
     }
     
@@ -64,9 +74,9 @@ private extension PagePersonViewController {
         present(navVC, animated: true)
     }
     
-    @objc private func logOutButtonTapped() {
+    @objc private func logInButtonTapped() {
         navigationController?.popViewController(animated: true)
-        let mainVC = AuthPagePersonViewController()
+        let mainVC = PagePersonViewController()
         let navVC = UINavigationController(rootViewController: mainVC)
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: true)

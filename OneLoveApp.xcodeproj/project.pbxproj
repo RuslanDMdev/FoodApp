@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1F697829ED50AA004C1BB3 /* AuthProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F697729ED50AA004C1BB3 /* AuthProfileCard.swift */; };
+		0C1F697E29ED530E004C1BB3 /* AuthPagePersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F697D29ED530E004C1BB3 /* AuthPagePersonViewController.swift */; };
 		0C52242829E410380017AAAE /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52242729E410380017AAAE /* CategoryModel.swift */; };
 		0C52243329E42D710017AAAE /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52243229E42D710017AAAE /* CategoryCollectionViewCell.swift */; };
 		0C52243529E42D740017AAAE /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52243429E42D740017AAAE /* CategoryCollectionView.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1F697729ED50AA004C1BB3 /* AuthProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProfileCard.swift; sourceTree = "<group>"; };
+		0C1F697D29ED530E004C1BB3 /* AuthPagePersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPagePersonViewController.swift; sourceTree = "<group>"; };
 		0C52242729E410380017AAAE /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		0C52243229E42D710017AAAE /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C52243429E42D740017AAAE /* CategoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionView.swift; sourceTree = "<group>"; };
@@ -70,6 +74,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1F697929ED52E2004C1BB3 /* AuthProfileCard */ = {
+			isa = PBXGroup;
+			children = (
+				0C1F697C29ED5301004C1BB3 /* Model */,
+				0C1F697B29ED52FB004C1BB3 /* View */,
+				0C1F697A29ED52F4004C1BB3 /* Controller */,
+			);
+			path = AuthProfileCard;
+			sourceTree = "<group>";
+		};
+		0C1F697A29ED52F4004C1BB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0C1F697D29ED530E004C1BB3 /* AuthPagePersonViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0C1F697B29ED52FB004C1BB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C1F697729ED50AA004C1BB3 /* AuthProfileCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C1F697C29ED5301004C1BB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0CA4023E29E58739003E282F /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +185,7 @@
 				0CFA52B529DD8458003CF6E8 /* MainScreen */,
 				0CFA52D429E006F3003CF6E8 /* Food */,
 				0CA4024229E7F73A003E282F /* PersonPage */,
+				0C1F697929ED52E2004C1BB3 /* AuthProfileCard */,
 				0CFA52B429DD8224003CF6E8 /* Resources */,
 			);
 			path = OneLoveApp;
@@ -409,6 +447,7 @@
 				0C52243529E42D740017AAAE /* CategoryCollectionView.swift in Sources */,
 				0CA4024929E7F94D003E282F /* PagePersonViewController.swift in Sources */,
 				0CFA52BA29DD857E003CF6E8 /* MenuViewHeader.swift in Sources */,
+				0C1F697E29ED530E004C1BB3 /* AuthPagePersonViewController.swift in Sources */,
 				0CFA52A029DD7314003CF6E8 /* MainViewController.swift in Sources */,
 				0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */,
 				0CA4023D29E5836E003E282F /* BannerCVCell.swift in Sources */,
@@ -416,6 +455,7 @@
 				0CFA52DA29E00769003CF6E8 /* FoodDataModel.swift in Sources */,
 				0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */,
 				0C52242829E410380017AAAE /* CategoryModel.swift in Sources */,
+				0C1F697829ED50AA004C1BB3 /* AuthProfileCard.swift in Sources */,
 				0CFA52E029E01F45003CF6E8 /* FoodCategoriesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
