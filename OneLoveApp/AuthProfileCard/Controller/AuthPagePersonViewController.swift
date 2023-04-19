@@ -10,13 +10,7 @@ import UIKit
 class AuthPagePersonViewController: UIViewController {
 
     private let AuthprofileElement = AuthProfileCard()
-    private let textField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "+7(___)-___-__-__"
-        textField.textAlignment = .left
-        textField.keyboardType = .phonePad
-        return textField
-    }()
+
     //MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +29,7 @@ private extension AuthPagePersonViewController {
     func initialize(){
         view.backgroundColor = .white
         let titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         titleLabel.text = "Авторизация"
         navigationItem.titleView = titleLabel
         let backButton = UIButton()
@@ -48,12 +42,7 @@ private extension AuthPagePersonViewController {
         }
         
         view.addSubview(AuthprofileElement)
-        view.addSubview(textField)
-        textField.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(100)
-            make.left.equalToSuperview().offset(24)
-            make.right.equalToSuperview().inset(24)
-        }
+        
         AuthprofileElement.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(306)
             make.left.equalToSuperview().offset(24)

@@ -151,19 +151,11 @@ private extension MainViewController {
             make.top.equalTo(titleLabel.snp.bottom).offset(32)
         }
         
-//        stackView.addArrangedSubview(collectionView)
-//        collectionView.snp.makeConstraints { make in
-//            make.right.equalTo(view).inset(15)
-//            make.left.equalTo(view).offset(15)
-//            make.height.equalTo(190)
-//            make.top.equalTo(banner.snp.bottom).offset(32)
-//        }
         
         stackView.addArrangedSubview(bottomElements)
         bottomElements.snp.makeConstraints { make in
             make.top.equalTo(collectionView.snp.bottom).offset(24)
             make.left.right.equalTo(view)
-//            make.bottom.equalTo(view)
         }
     }
     // MARK: - Move to another controller

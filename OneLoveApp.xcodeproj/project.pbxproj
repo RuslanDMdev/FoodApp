@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0C1F697829ED50AA004C1BB3 /* AuthProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F697729ED50AA004C1BB3 /* AuthProfileCard.swift */; };
 		0C1F697E29ED530E004C1BB3 /* AuthPagePersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F697D29ED530E004C1BB3 /* AuthPagePersonViewController.swift */; };
+		0C1F698129EEC2BF004C1BB3 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F698029EEC2BF004C1BB3 /* URLManager.swift */; };
+		0C1F698329EEC2E7004C1BB3 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F698229EEC2E7004C1BB3 /* DataProvider.swift */; };
+		0C1F698529EEC305004C1BB3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F698429EEC305004C1BB3 /* ProductModel.swift */; };
+		0C1F698729EEC32D004C1BB3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F698629EEC32D004C1BB3 /* NetworkManager.swift */; };
 		0C52242829E410380017AAAE /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52242729E410380017AAAE /* CategoryModel.swift */; };
 		0C52243329E42D710017AAAE /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52243229E42D710017AAAE /* CategoryCollectionViewCell.swift */; };
 		0C52243529E42D740017AAAE /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52243429E42D740017AAAE /* CategoryCollectionView.swift */; };
@@ -35,6 +39,10 @@
 /* Begin PBXFileReference section */
 		0C1F697729ED50AA004C1BB3 /* AuthProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProfileCard.swift; sourceTree = "<group>"; };
 		0C1F697D29ED530E004C1BB3 /* AuthPagePersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPagePersonViewController.swift; sourceTree = "<group>"; };
+		0C1F698029EEC2BF004C1BB3 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		0C1F698229EEC2E7004C1BB3 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		0C1F698429EEC305004C1BB3 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		0C1F698629EEC32D004C1BB3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0C52242729E410380017AAAE /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		0C52243229E42D710017AAAE /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C52243429E42D740017AAAE /* CategoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionView.swift; sourceTree = "<group>"; };
@@ -105,6 +113,17 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0C1F697F29EEC2A8004C1BB3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0C1F698029EEC2BF004C1BB3 /* URLManager.swift */,
+				0C1F698229EEC2E7004C1BB3 /* DataProvider.swift */,
+				0C1F698629EEC32D004C1BB3 /* NetworkManager.swift */,
+				0C1F698429EEC305004C1BB3 /* ProductModel.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		0CA4023E29E58739003E282F /* Category */ = {
@@ -186,6 +205,7 @@
 				0CFA52D429E006F3003CF6E8 /* Food */,
 				0CA4024229E7F73A003E282F /* PersonPage */,
 				0C1F697929ED52E2004C1BB3 /* AuthProfileCard */,
+				0C1F697F29EEC2A8004C1BB3 /* Networking */,
 				0CFA52B429DD8224003CF6E8 /* Resources */,
 			);
 			path = OneLoveApp;
@@ -443,16 +463,20 @@
 				0CFA52CF29DEF204003CF6E8 /* BannerDataModel.swift in Sources */,
 				0CA4024B29E7FBEE003E282F /* ProfileCellOfStack.swift in Sources */,
 				0CA4024F29E80DEF003E282F /* ProfileBottomElements.swift in Sources */,
+				0C1F698529EEC305004C1BB3 /* ProductModel.swift in Sources */,
 				0CA4024D29E7FC6D003E282F /* ProfileCard.swift in Sources */,
 				0C52243529E42D740017AAAE /* CategoryCollectionView.swift in Sources */,
 				0CA4024929E7F94D003E282F /* PagePersonViewController.swift in Sources */,
+				0C1F698329EEC2E7004C1BB3 /* DataProvider.swift in Sources */,
 				0CFA52BA29DD857E003CF6E8 /* MenuViewHeader.swift in Sources */,
 				0C1F697E29ED530E004C1BB3 /* AuthPagePersonViewController.swift in Sources */,
+				0C1F698729EEC32D004C1BB3 /* NetworkManager.swift in Sources */,
 				0CFA52A029DD7314003CF6E8 /* MainViewController.swift in Sources */,
 				0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */,
 				0CA4023D29E5836E003E282F /* BannerCVCell.swift in Sources */,
 				0CA4024129E58775003E282F /* BannerCollectionView.swift in Sources */,
 				0CFA52DA29E00769003CF6E8 /* FoodDataModel.swift in Sources */,
+				0C1F698129EEC2BF004C1BB3 /* URLManager.swift in Sources */,
 				0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */,
 				0C52242829E410380017AAAE /* CategoryModel.swift in Sources */,
 				0C1F697829ED50AA004C1BB3 /* AuthProfileCard.swift in Sources */,

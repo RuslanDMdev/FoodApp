@@ -48,6 +48,7 @@ class AuthProfileCard: UIView {
         let label = UILabel()
         label.text = "Продолжая, я подтверждаю, что согласен с правилами, условиями и политикой конфиденциальности."
         label.font = UIFont.systemFont(ofSize: 12)
+        label.textAlignment = .center
         label.numberOfLines = 2
         return label
     }()
@@ -57,6 +58,9 @@ class AuthProfileCard: UIView {
         textField.placeholder = "+7(___)-___-__-__"
         textField.textAlignment = .left
         textField.keyboardType = .phonePad
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = #colorLiteral(red: 0.8235294118, green: 0.8156862745, blue: 0.8156862745, alpha: 1)
+        textField.layer.cornerRadius = 12
         return textField
     }()
 
@@ -103,6 +107,8 @@ private extension AuthProfileCard{
         textField.snp.makeConstraints { make in
             make.top.equalTo(secondLabel.snp.bottom).offset(16)
             make.right.left.equalToSuperview()
+            make.height.equalTo(48)
+
         }
         
         LogInButton.snp.makeConstraints { make in
@@ -118,7 +124,6 @@ private extension AuthProfileCard{
         }
         
         skipButton.snp.makeConstraints { make in
-//            make.top.equalTo(thirdLabel.snp.bottom).offset(100)
             make.bottom.equalToSuperview().inset(37)
             make.centerX.equalToSuperview()
             make.width.equalTo(UIConstants.buttonWidth)
@@ -131,9 +136,20 @@ private extension AuthProfileCard{
         if let text = textField.text, text.count > 11 {
             LogInButton.backgroundColor = #colorLiteral(red: 0.5058823529, green: 0.2823529412, blue: 0.5921568627, alpha: 1)
             LogInButton.setTitleColor(.white, for: .normal)
+            LogInButton.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
+
         } else {
             LogInButton.backgroundColor = #colorLiteral(red: 0.9137254902, green: 0.9098039216, blue: 0.9098039216, alpha: 1)
+            LogInButton.addTarget(self, action: #selector(ButtonTapped), for: .touchUpInside)
         }
         
+    }
+    
+    // MARK: - Move to another controller
+    @objc private func ButtonTapped() {
+
+    }
+    
+    @objc private func logInButtonTapped() {
     }
 }
