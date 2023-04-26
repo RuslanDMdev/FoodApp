@@ -26,6 +26,8 @@
 		0CAB53DC29F6962500E3E6D4 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53DB29F6962500E3E6D4 /* SectionHeader.swift */; };
 		0CAB53DE29F6963F00E3E6D4 /* SectionBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53DD29F6963F00E3E6D4 /* SectionBackground.swift */; };
 		0CAB53E129F6966F00E3E6D4 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53E029F6966F00E3E6D4 /* CategoryCell.swift */; };
+		0CAB53E329F69A6900E3E6D4 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53E229F69A6800E3E6D4 /* ProductCell.swift */; };
+		0CAB53E729F91EBB00E3E6D4 /* ProductContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53E629F91EBB00E3E6D4 /* ProductContentModel.swift */; };
 		0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529B29DD7314003CF6E8 /* AppDelegate.swift */; };
 		0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529D29DD7314003CF6E8 /* SceneDelegate.swift */; };
 		0CFA52A029DD7314003CF6E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529F29DD7314003CF6E8 /* MainViewController.swift */; };
@@ -34,7 +36,6 @@
 		0CFA52BA29DD857E003CF6E8 /* MenuViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52B929DD857E003CF6E8 /* MenuViewHeader.swift */; };
 		0CFA52CF29DEF204003CF6E8 /* BannerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52CE29DEF204003CF6E8 /* BannerDataModel.swift */; };
 		0CFA52D329DF0BA1003CF6E8 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52D229DF0BA1003CF6E8 /* BottomView.swift */; };
-		0CFA52DA29E00769003CF6E8 /* FoodDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52D929E00769003CF6E8 /* FoodDataModel.swift */; };
 		0CFA52E029E01F45003CF6E8 /* FoodCategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52DF29E01F45003CF6E8 /* FoodCategoriesController.swift */; };
 		B8F582EE1FB451DC59F60857 /* Pods_OneLoveApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA1494A525E8301CA28A4D4 /* Pods_OneLoveApp.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,8 @@
 		0CAB53DB29F6962500E3E6D4 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		0CAB53DD29F6963F00E3E6D4 /* SectionBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBackground.swift; sourceTree = "<group>"; };
 		0CAB53E029F6966F00E3E6D4 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		0CAB53E229F69A6800E3E6D4 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		0CAB53E629F91EBB00E3E6D4 /* ProductContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContentModel.swift; sourceTree = "<group>"; };
 		0CFA529829DD7314003CF6E8 /* OneLoveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLoveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFA529B29DD7314003CF6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CFA529D29DD7314003CF6E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		0CFA52B929DD857E003CF6E8 /* MenuViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewHeader.swift; sourceTree = "<group>"; };
 		0CFA52CE29DEF204003CF6E8 /* BannerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDataModel.swift; sourceTree = "<group>"; };
 		0CFA52D229DF0BA1003CF6E8 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
-		0CFA52D929E00769003CF6E8 /* FoodDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDataModel.swift; sourceTree = "<group>"; };
 		0CFA52DF29E01F45003CF6E8 /* FoodCategoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoriesController.swift; sourceTree = "<group>"; };
 		8F47F912952705FC35EC80E5 /* Pods-OneLoveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLoveApp.release.xcconfig"; path = "Target Support Files/Pods-OneLoveApp/Pods-OneLoveApp.release.xcconfig"; sourceTree = "<group>"; };
 		D65CA376F2CDF7AD1BEB6388 /* Pods-OneLoveApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLoveApp.debug.xcconfig"; path = "Target Support Files/Pods-OneLoveApp/Pods-OneLoveApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			children = (
 				0CAB53DF29F6964D00E3E6D4 /* Header */,
 				0CAB53E029F6966F00E3E6D4 /* CategoryCell.swift */,
+				0CAB53E229F69A6800E3E6D4 /* ProductCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,7 +341,7 @@
 		0CFA52D729E00714003CF6E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0CFA52D929E00769003CF6E8 /* FoodDataModel.swift */,
+				0CAB53E629F91EBB00E3E6D4 /* ProductContentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -479,10 +482,12 @@
 				0C52243729E55DC60017AAAE /* MainModel.swift in Sources */,
 				0CFA52D329DF0BA1003CF6E8 /* BottomView.swift in Sources */,
 				0CFA52CF29DEF204003CF6E8 /* BannerDataModel.swift in Sources */,
+				0CAB53E729F91EBB00E3E6D4 /* ProductContentModel.swift in Sources */,
 				0CA4024B29E7FBEE003E282F /* ProfileCellOfStack.swift in Sources */,
 				0CA4024F29E80DEF003E282F /* ProfileBottomElements.swift in Sources */,
 				0C1F698529EEC305004C1BB3 /* ProductModel.swift in Sources */,
 				0CA4024D29E7FC6D003E282F /* ProfileCard.swift in Sources */,
+				0CAB53E329F69A6900E3E6D4 /* ProductCell.swift in Sources */,
 				0C52243529E42D740017AAAE /* CategoryCollectionView.swift in Sources */,
 				0CA4024929E7F94D003E282F /* PagePersonViewController.swift in Sources */,
 				0C1F698329EEC2E7004C1BB3 /* DataProvider.swift in Sources */,
@@ -494,7 +499,6 @@
 				0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */,
 				0CA4023D29E5836E003E282F /* BannerCVCell.swift in Sources */,
 				0CA4024129E58775003E282F /* BannerCollectionView.swift in Sources */,
-				0CFA52DA29E00769003CF6E8 /* FoodDataModel.swift in Sources */,
 				0C1F698129EEC2BF004C1BB3 /* URLManager.swift in Sources */,
 				0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */,
 				0C52242829E410380017AAAE /* CategoryModel.swift in Sources */,

@@ -11,7 +11,7 @@ protocol CategoryDelegateProtocol: AnyObject {
     func scrollToSelectedCategory(type: String)
 }
 
-struct Category {
+struct Categorys {
     var name: String
     var type: String
 }
@@ -23,11 +23,11 @@ class SectionHeader: UICollectionReusableView {
 
     weak var delegate: CategoryDelegateProtocol?
     
-    let categoryArray = [Category(name: "Десерты", type: "Deserts"),
-                         Category(name: "Печенье", type: "Cookies"),
-                         Category(name: "Трайфлы", type: "Trayfls"),
-                         Category(name: "Тарталетки", type: "Tartaletki"),
-                         Category(name: "Торты", type: "Cakes")]
+    let categoryArray = [Categorys(name: "Десерты", type: "Deserts"),
+                         Categorys(name: "Печенье", type: "Cookies"),
+                         Categorys(name: "Трайфлы", type: "Trayfls"),
+                         Categorys(name: "Тарталетки", type: "Tartaletki"),
+                         Categorys(name: "Торты", type: "Cakes")]
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
