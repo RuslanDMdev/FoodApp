@@ -35,7 +35,7 @@ class MenuViewHeader: UIView {
         return view
     }()
     
-    private let optionsButton: UIButton = {
+    let optionsButton: UIButton = {
         let button = UIButton()
         let icon = UIImage(named: "optionsButton")
         button.setImage(icon, for: .normal)

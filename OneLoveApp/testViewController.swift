@@ -1,16 +1,16 @@
 //
-//  PagePersonViewController.swift
+//  testViewController.swift
 //  OneLoveApp
 //
-//  Created by Ruslan Dalgatov on 13.04.2023.
+//  Created by Ruslan Dalgatov on 28.04.2023.
 //
 
 import UIKit
 
-class PagePersonViewController: UIViewController {
+class testViewController: UIViewController {
     
-    private let profileElement = ProfileCard()
-    private let profileBottomElement = ProfileBottomElements()
+    private let textElement = testView()
+    
     //MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,12 @@ class PagePersonViewController: UIViewController {
 }
 // MARK: - Private methods
 
-private extension PagePersonViewController {
+private extension testViewController {
     func initialize(){
         view.backgroundColor = .white
         let titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        titleLabel.text = "Профиль"
+        titleLabel.text = "TestViewController"
         navigationItem.titleView = titleLabel
         let backButton = UIButton()
         backButton.setImage(UIImage(named: "arrow-left"), for: .normal)
@@ -36,23 +36,14 @@ private extension PagePersonViewController {
             make.width.height.equalTo(26)
         }
         
-        view.addSubview(profileElement)
-        view.addSubview(profileBottomElement)
+        view.addSubview(textElement)
 
-        profileElement.snp.makeConstraints { make in
+        textElement.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.height.equalTo(225)
             make.top.equalToSuperview().offset(100)
         }
         
-        profileBottomElement.snp.makeConstraints { make in
-            make.top.equalTo(profileElement.snp.bottom).offset(112)
-            make.left.equalToSuperview().offset(15)
-            make.right.equalToSuperview().inset(15)
-            make.height.equalTo(300)
-        }
-        profileBottomElement.LogOutButton.addTarget(self, action: #selector(logOutButtonTapped), for: .touchUpInside)
-
     }
     
     // MARK: - Move to another controller
@@ -61,15 +52,8 @@ private extension PagePersonViewController {
         let mainVC = MainViewController()
         let navVC = UINavigationController(rootViewController: mainVC)
         navVC.modalPresentationStyle = .fullScreen
-        navVC.modalTransitionStyle = .crossDissolve
         present(navVC, animated: true)
     }
     
-    @objc private func logOutButtonTapped() {
-        navigationController?.popViewController(animated: true)
-        let mainVC = AuthPagePersonViewController()
-        let navVC = UINavigationController(rootViewController: mainVC)
-        navVC.modalPresentationStyle = .fullScreen
-        present(navVC, animated: true)
-    }
+
 }

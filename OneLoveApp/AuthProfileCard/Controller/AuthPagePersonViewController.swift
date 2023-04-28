@@ -60,6 +60,7 @@ private extension AuthPagePersonViewController {
         let mainVC = MainViewController()
         let navVC = UINavigationController(rootViewController: mainVC)
         navVC.modalPresentationStyle = .fullScreen
+        navVC.modalTransitionStyle = .crossDissolve
         present(navVC, animated: true)
     }
     

@@ -113,6 +113,7 @@ private extension MainViewController {
             make.height.equalTo(84)
         }
         menuViewHeader.prifileButton.addTarget(self, action: #selector(profileButtonTapped), for: .touchUpInside)
+        menuViewHeader.optionsButton.addTarget(self, action: #selector(optionsButtonTapped), for: .touchUpInside)
 
         view.addSubview(scrollView)
         scrollView.backgroundColor = .white
@@ -163,7 +164,17 @@ private extension MainViewController {
         let profileVC = PagePersonViewController()
         let navVC = UINavigationController(rootViewController: profileVC)
         navVC.modalPresentationStyle = .fullScreen
+        navVC.modalTransitionStyle = .crossDissolve
         present(navVC, animated: true)
         
     }
+    
+    @objc private func optionsButtonTapped() {
+        let profileVC = testViewController()
+        let navVC = UINavigationController(rootViewController: profileVC)
+        navVC.modalPresentationStyle = .formSheet
+        present(navVC, animated: true)
+        
+    }
+    
 }

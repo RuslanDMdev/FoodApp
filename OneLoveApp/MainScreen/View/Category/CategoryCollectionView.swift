@@ -64,29 +64,4 @@ extension CategoryCollectionView: UICollectionViewDelegateFlowLayout {
         return CGSize(width: cellwidth, height: cellheight)
         
     }
-
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let selectedCell = collectionView.cellForItem(at: indexPath) as! BannerCVCell
-//        let typeOfFood = selectedCell.banner?.type
-//        switch typeOfFood {
-//        case .Deserts:
-//            let controller1 = FoodCategoriesController()
-//            navigationController?.pushViewController(controller1, animated: true)
-//        case .Cookies:
-//            let controller2 = FoodCategoriesController()
-//            navigationController?.pushViewController(controller2, animated: true)
-//        case .Trayfls:
-//            let controller3 = FoodCategoriesController()
-//            navigationController?.pushViewController(controller3, animated: true)
-//        case .Tartaletki:
-//            let controller4 = FoodCategoriesController()
-//            navigationController?.pushViewController(controller4, animated: true)
-//        case .Cakes:
-//            let controller5 = FoodCategoriesController()
-//            navigationController?.pushViewController(controller5, animated: true)
-//        case .Catalog:
-//            let controller6 = FoodCategoriesController()
-//            navigationController?.pushViewController(controller6, animated: true)
-//        }
-//    }
 }
