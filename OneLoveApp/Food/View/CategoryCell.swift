@@ -14,21 +14,22 @@ class CategoryCell: UICollectionViewCell {
     lazy var textLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = #colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 1)
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return label
     }()
     
     var isSelectedCell: Bool = false {
         didSet {
             if isSelectedCell {
-                textLabel.font = .systemFont(ofSize: 13, weight: .semibold)
-                backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.2274509804, blue: 0.4117647059, alpha: 0.1965542219)
+                textLabel.font = .systemFont(ofSize: 12, weight: .medium)
+                backgroundColor = #colorLiteral(red: 0.5058823529, green: 0.2823529412, blue: 0.5921568627, alpha: 1)
+                textLabel.textColor = .white
                 layer.borderWidth = 0
             } else {
-                textLabel.font = .systemFont(ofSize: 13, weight: .regular)
-                backgroundColor = .clear
-                layer.borderWidth = 1
-                layer.borderColor = #colorLiteral(red: 0.9701812863, green: 0.6653127074, blue: 0.7502200007, alpha: 1)
+                textLabel.font = .systemFont(ofSize: 12, weight: .medium)
+                backgroundColor = #colorLiteral(red: 0.9137254902, green: 0.9098039216, blue: 0.9098039216, alpha: 1)
+                textLabel.textColor = .black
+
             }
         }
     }
