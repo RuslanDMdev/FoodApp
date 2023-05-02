@@ -38,7 +38,6 @@ class CategoryCollectionView: UICollectionView {
     }
     
     // MARK: - Private methods
-
 }
 
 // MARK: - Extensions
@@ -62,6 +61,17 @@ extension CategoryCollectionView: UICollectionViewDelegateFlowLayout {
         let cellwidth = (UIScreen.main.bounds.width / 2) - 25
         let cellheight = cellwidth + 36
         return CGSize(width: cellwidth, height: cellheight)
+        
+    }
+}
+
+extension CategoryCollectionView: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCategory = categories[indexPath.item]
+        print("Selected category: \(selectedCategory)")
+    
+        let foodType = categories[indexPath.item].foodType
         
     }
 }

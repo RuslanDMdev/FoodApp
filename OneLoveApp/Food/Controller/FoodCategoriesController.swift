@@ -74,8 +74,10 @@ extension FoodCategoriesController: UICollectionViewDelegate, UICollectionViewDe
     private func configureCollectionView() {
         collectionView.collectionViewLayout = createLayout()
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
-        let productCell = UINib(nibName: "ProductCell", bundle: nil)
-        collectionView.register(productCell, forCellWithReuseIdentifier: ProductCell.reuseIdentifier)
+//        let productCell = UINib(nibName: "ProductCell", bundle: nil)
+//        collectionView.register(productCell, forCellWithReuseIdentifier: ProductCell.reuseIdentifier)
+        
+        collectionView.register(ProductCell2.self, forCellWithReuseIdentifier: ProductCell2.reuseIdentifier)
         
         let bannerCell = UINib(nibName: "BannerCell", bundle: nil)
         collectionView.register(bannerCell, forCellWithReuseIdentifier: BannerCell.reuseIdentifier)
@@ -141,7 +143,7 @@ extension FoodCategoriesController: UICollectionViewDelegate, UICollectionViewDe
                 cell?.setup(model: self.banners[indexPath.item])
                 return cell
             case .products:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier, for: indexPath) as? ProductCell
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell2.reuseIdentifier, for: indexPath) as? ProductCell2
                 cell?.setup(model: self.products[indexPath.item])
                 return cell
             }
@@ -164,6 +166,7 @@ extension FoodCategoriesController: UICollectionViewDelegate, UICollectionViewDe
         dataSource.apply(snapshot, animatingDifferences: true)
     }
 }
+
 
 // MARK: Scroll to product method
 extension FoodCategoriesController: CategoryDelegateProtocol {

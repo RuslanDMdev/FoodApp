@@ -29,8 +29,9 @@
 		0CAB53E329F69A6900E3E6D4 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53E229F69A6800E3E6D4 /* ProductCell.swift */; };
 		0CAB53E729F91EBB00E3E6D4 /* ProductContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53E629F91EBB00E3E6D4 /* ProductContentModel.swift */; };
 		0CAB53EE29FBDBCE00E3E6D4 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53ED29FBDBCE00E3E6D4 /* BannerCell.swift */; };
-		0CAB53F029FBE48700E3E6D4 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53EF29FBE48700E3E6D4 /* testViewController.swift */; };
 		0CAB53F229FBE70600E3E6D4 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53F129FBE70600E3E6D4 /* testView.swift */; };
+		0CAB53F42A012FC900E3E6D4 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53F32A012FC900E3E6D4 /* testViewController.swift */; };
+		0CAB53F62A01307400E3E6D4 /* ProductCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB53F52A01307400E3E6D4 /* ProductCell2.swift */; };
 		0CFA529C29DD7314003CF6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529B29DD7314003CF6E8 /* AppDelegate.swift */; };
 		0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529D29DD7314003CF6E8 /* SceneDelegate.swift */; };
 		0CFA52A029DD7314003CF6E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA529F29DD7314003CF6E8 /* MainViewController.swift */; };
@@ -66,8 +67,9 @@
 		0CAB53E229F69A6800E3E6D4 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		0CAB53E629F91EBB00E3E6D4 /* ProductContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContentModel.swift; sourceTree = "<group>"; };
 		0CAB53ED29FBDBCE00E3E6D4 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
-		0CAB53EF29FBE48700E3E6D4 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		0CAB53F129FBE70600E3E6D4 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
+		0CAB53F32A012FC900E3E6D4 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
+		0CAB53F52A01307400E3E6D4 /* ProductCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell2.swift; sourceTree = "<group>"; };
 		0CFA529829DD7314003CF6E8 /* OneLoveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLoveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFA529B29DD7314003CF6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CFA529D29DD7314003CF6E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,8 +236,8 @@
 				0CFA52AF29DD8184003CF6E8 /* Application */,
 				0CFA52B529DD8458003CF6E8 /* MainScreen */,
 				0CFA52D429E006F3003CF6E8 /* Food */,
-				0CAB53EF29FBE48700E3E6D4 /* testViewController.swift */,
 				0CAB53F129FBE70600E3E6D4 /* testView.swift */,
+				0CAB53F32A012FC900E3E6D4 /* testViewController.swift */,
 				0CA4024229E7F73A003E282F /* PersonPage */,
 				0C1F697929ED52E2004C1BB3 /* AuthProfileCard */,
 				0C1F697F29EEC2A8004C1BB3 /* Networking */,
@@ -351,6 +353,7 @@
 				0CAB53DF29F6964D00E3E6D4 /* Header */,
 				0CAB53E029F6966F00E3E6D4 /* CategoryCell.swift */,
 				0CAB53E229F69A6800E3E6D4 /* ProductCell.swift */,
+				0CAB53F52A01307400E3E6D4 /* ProductCell2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -499,6 +502,8 @@
 				0C52243729E55DC60017AAAE /* MainModel.swift in Sources */,
 				0CFA52D329DF0BA1003CF6E8 /* BottomView.swift in Sources */,
 				0CFA52CF29DEF204003CF6E8 /* BannerDataModel.swift in Sources */,
+				0CAB53F62A01307400E3E6D4 /* ProductCell2.swift in Sources */,
+				0CAB53F42A012FC900E3E6D4 /* testViewController.swift in Sources */,
 				0CAB53EE29FBDBCE00E3E6D4 /* BannerCell.swift in Sources */,
 				0CAB53E729F91EBB00E3E6D4 /* ProductContentModel.swift in Sources */,
 				0CA4024B29E7FBEE003E282F /* ProfileCellOfStack.swift in Sources */,
@@ -520,7 +525,6 @@
 				0C1F698129EEC2BF004C1BB3 /* URLManager.swift in Sources */,
 				0CFA529E29DD7314003CF6E8 /* SceneDelegate.swift in Sources */,
 				0CAB53F229FBE70600E3E6D4 /* testView.swift in Sources */,
-				0CAB53F029FBE48700E3E6D4 /* testViewController.swift in Sources */,
 				0C52242829E410380017AAAE /* CategoryModel.swift in Sources */,
 				0CAB53DE29F6963F00E3E6D4 /* SectionBackground.swift in Sources */,
 				0C1F697829ED50AA004C1BB3 /* AuthProfileCard.swift in Sources */,
