@@ -172,7 +172,7 @@ private extension MainViewController {
     @objc private func optionsButtonTapped() {
         let profileVC = testViewController()
         let navVC = UINavigationController(rootViewController: profileVC)
-        navVC.modalPresentationStyle = .formSheet
+        navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: true)
         
     }
